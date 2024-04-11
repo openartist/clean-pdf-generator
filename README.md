@@ -1,7 +1,7 @@
 # clean-pdf-generator
 Generate "clean" pdfs from Wordpress pages.
 
-Add the plugin and add the "Download PDF" block into your page. When clicked it will initate Dompdf to export a pdf of your page.
+Activate the plugin and add the "Download PDF" block into your page. When clicked it will initate Dompdf to export a pdf of your page.
 
 Current issues:
 • The output does not include all styles and fonts.
