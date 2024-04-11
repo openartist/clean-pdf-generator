@@ -7,17 +7,17 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+    exit;
 }
 
-require_once 'pdf-generator.php'; // Include your PDF generation functionality
+require_once 'pdf-generator.php'; // Includes the PDF generation functionality
 require_once __DIR__ . '/vendor/autoload.php';
 
 // Enqueue JavaScript for the Gutenberg block
 function clean_pdf_generator_enqueue_block_editor_assets() {
     wp_enqueue_script(
         'clean-pdf-generator-block',
-        plugins_url('block/index.js', __FILE__), // Make sure this path is correct
+        plugins_url('block/index.js', __FILE__),
         array('wp-blocks', 'wp-element', 'wp-editor'),
         filemtime(plugin_dir_path(__FILE__) . '/block/index.js')
     );
@@ -32,8 +32,6 @@ function handle_pdf_generation_ajax() {
         // Decode the HTML content sent from the front-end
         $html_content = rawurldecode($_POST['content']);
 
-        // Optionally, perform security checks here, like nonce verification
-
         // Generate and stream the PDF to the browser
         generate_clean_pdf($html_content);
     }
@@ -43,9 +41,9 @@ function handle_pdf_generation_ajax() {
 
 function clean_pdf_enqueue_frontend_script() {
     wp_enqueue_script(
-        'clean-pdf-download-front', // Handle for your script
-        plugins_url('pdf-download-front.js', __FILE__), // Path to your JS file
-        array(), // Dependencies, can be an array of handles e.g., array('jquery')
+        'clean-pdf-download-front',
+        plugins_url('pdf-download-front.js', __FILE__),
+        array(),
         '1.0.0', // Version number for cache control
         true // Load in the footer
     );
