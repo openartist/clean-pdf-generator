@@ -7,6 +7,7 @@ Current issues:
 • The output does not include all styles and fonts.
 • Should allow user to enter an html link with ID instead of block button
 • Need to add method for user to specify file download name (as a parameter in the button)
+• Despite integrating Emogrifier to inline CSS styles with the hope of solving the styling issues, the generated PDFs still lack accurate CSS rendering.
 
 
 
