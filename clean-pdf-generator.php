@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Clean PDF Generator
- * Description: Generates a clean PDF for download, capturing the current page's HTML.
- * Version: 1.0
- * Author: Your Name
+ * Description: Generates a clean PDF for download, capturing the current page's design.
+ * Version: 1.0 Beta
+ * Author: Paul Bloch
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
